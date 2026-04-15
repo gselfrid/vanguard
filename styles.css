@@ -1,7 +1,6 @@
-/* CSS BY YOUR NAME */
+/* CSS BY GWEN SELFRIDGE */
 
-/* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,19 +63,143 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+body{
+    min-width: 400px;
+    font-family: var(--font);
+    overflow-x: hidden;
+    margin: auto;
+}
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+header{
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+h1::before{
+    content: "";
+    display: inline-block;
+    margin: 0.5rem;
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
+
+h1, h2, h3, main a, header a{
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h1{
+    font-size: 1.75rem;
+    align-self: center;
+    color: var(--blue);
+    display: inline-flex;
+    align-items: center;
+    margin: 1rem auto;
+
+}
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+
+nav ul {
+    position: absolute;
+    width: 100%;
+    margin:0;
+    padding:0;
+    top: 100%;
+    left: 0;
+    right: 0;   
+    list-style:none;
+    overflow:hidden;
+    text-align:center;
+    max-height: 0;
+}
+
+nav li a {
+    background-color: var(--black);
+    display:block;
+    width: 90%;
+    font-size:1.25rem;
+    padding:1rem;
+    text-transform:uppercase;
+    text-decoration:none;
+    text-align: center;
+    color: var(--blue);
+    transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+    position: static;
+    padding: 1.5rem;
+}
+
+label span {
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: .75rem;
+}
+label span:after {
+    top: -.75rem;
+}
+input {
+  display:none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #invest{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 60vh;
     display: grid;
     place-items: center;
     text-align: center;
@@ -84,14 +207,38 @@ table {
     overflow: hidden;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
-h1::before{
-    content: "";
-    display: inline-block;
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+#invest h2{
+    color: var(--white);
+    margin: 1rem;
+}
+
+#invest p{
+    color: var(--white);
+    margin: 1rem;
+}
+
+#invest a{
+    display: block;
+    background-color: var(--blue);
+    width: 50%;
+    margin: auto;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 7.5px;
+    transition:0.5s;
+}
+
+#invest a:hover{
+    transition: 0.5s;
+    display: block;
+    background-color: var(--red);
+    width: 50%;
+    margin: auto;
+    padding: 1.25rem 0.75rem;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 7.5px;
 }
 
 /* THIS ONE IS DONE FOR YOU */
