@@ -444,5 +444,17 @@ footer a {
 @media screen and (min-width: 900px){
     #services section{
         grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    form div{
+        margin
     }
 }
