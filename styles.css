@@ -97,6 +97,15 @@ h1, h2, h3, main a, header a{
     font-weight: bold;
 }
 
+h2, h3, #invest a{
+    animation: enter 1s ease-out;
+}
+
+@keyframes enter{
+    0% {transform: translateY(-30px); opacity: 0%;}
+    100% {transform: translateY(0px); opacity: 100%;}
+}
+
 h2{
     font-size: 1.5rem;
 }
@@ -274,6 +283,11 @@ p{
     margin: 1rem;
 }
 
+#services div:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
 #results{
     background-color: var(--blue);
     width: 100%;
@@ -400,6 +414,18 @@ input[type=submit]{
     font-weight: bold;
     border-radius: 10px;
     height: 45px;
+}
+
+input[type=submit]:hover{
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 10px;
+    height: 45px;
+    padding: 1rem;
+    height: 55px;
+    transition: 0.5s;
 }
 
 footer{
