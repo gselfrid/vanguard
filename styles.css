@@ -351,7 +351,6 @@ th{
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -478,9 +477,5 @@ footer a {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         align-items: center;
-    }
-
-    form div{
-        margin
     }
 }
